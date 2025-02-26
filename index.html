@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remote DVR Access Options</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 32px;
+      }
+      h2 {
+        color: #2980b9;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+        margin-top: 40px;
+        font-size: 24px;
+      }
+      .option {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .recommended {
+        border-left: 5px solid #27ae60;
+      }
+      .good-stuff,
+      .not-good-stuff {
+        margin-top: 15px;
+      }
+      .good-stuff h3,
+      .not-good-stuff h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .good-stuff {
+        color: #27ae60;
+      }
+      .not-good-stuff {
+        color: #e74c3c;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 8px;
+        color: #333;
+      }
+      .bottom-line {
+        background-color: #f1f8e9;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 30px;
+        font-weight: bold;
+      }
+      .separator {
+        height: 2px;
+        background-color: #eee;
+        margin: 30px 0;
+      }
+      .svg-container {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .recommendation-badge {
+        display: inline-block;
+        background-color: #27ae60;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Remote DVR Access Options for Sri Lankan Users</h1>
+
+    <p>
+      Looking to access your DVR remotely? Here's a comprehensive guide to the
+      three main methods available, with specific considerations for the Sri
+      Lankan context.
+    </p>
+
+    <div class="option">
+      <h2>1. Port Forwarding with Static IP</h2>
+      <div class="svg-container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 800 200"
+          width="100%"
+        >
+          <!-- Background -->
+          <rect width="800" height="200" fill="#f8f9fa" rx="10" ry="10" />
+
+          <!-- Internet Cloud -->
+          <ellipse
+            cx="150"
+            cy="100"
+            rx="100"
+            ry="60"
+            fill="#e6f7ff"
+            stroke="#1890ff"
+            stroke-width="2"
+          />
+          <text
+            x="150"
+            y="105"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#1890ff"
+          >
+            Internet
+          </text>
+
+          <!-- Router -->
+          <rect
+            x="300"
+            y="70"
+            width="100"
+            height="60"
+            rx="5"
+            ry="5"
+            fill="#fff"
+            stroke="#ff7875"
+            stroke-width="2"
+          />
+          <text
+            x="350"
+            y="105"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#ff7875"
+          >
+            Router
+          </text>
+
+          <!-- DVR -->
+          <rect
+            x="550"
+            y="70"
+            width="100"
+            height="60"
+            rx="5"
+            ry="5"
+            fill="#fff"
+            stroke="#52c41a"
+            stroke-width="2"
+          />
+          <text
+            x="600"
+            y="105"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#52c41a"
+          >
+            DVR
+          </text>
+
+          <!-- Connection Lines -->
+          <line
+            x1="200"
+            y1="100"
+            x2="300"
+            y2="100"
+            stroke="#1890ff"
+            stroke-width="2"
+          />
+          <line
+            x1="400"
+            y1="100"
+            x2="550"
+            y2="100"
+            stroke="#ff7875"
+            stroke-width="2"
+          />
+
+          <!-- Port Numbers -->
+          <rect
+            x="450"
+            y="85"
+            width="50"
+            height="30"
+            rx="5"
+            ry="5"
+            fill="#fff"
+            stroke="#ff7875"
+            stroke-width="2"
+          />
+          <text
+            x="475"
+            y="105"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="14"
+            fill="#ff7875"
+          >
+            8080
+          </text>
+
+          <!-- Static IP Note -->
+          <rect
+            x="300"
+            y="150"
+            width="160"
+            height="30"
+            rx="5"
+            ry="5"
+            fill="#fffbe6"
+            stroke="#faad14"
+            stroke-width="1"
+          />
+          <text
+            x="380"
+            y="170"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="14"
+            fill="#d4b106"
+          >
+            Needs Static IP
+          </text>
+        </svg>
+      </div>
+
+      <h3>Overview:</h3>
+      <p>
+        This method configures your router to allow external traffic to directly
+        access your DVR through a specific port.
+      </p>
+
+      <div class="good-stuff">
+        <h3>Advantages:</h3>
+        <ul>
+          <li>Direct connection without intermediary services</li>
+          <li>No recurring subscription fees after initial setup</li>
+          <li>Reliable and stable connection quality</li>
+        </ul>
+      </div>
+
+      <div class="not-good-stuff">
+        <h3>Disadvantages:</h3>
+        <ul>
+          <li>Potential security vulnerabilities if not properly configured</li>
+          <li>
+            Requires a static IP address from your Internet Service Provider
+          </li>
+          <li>
+            Obtaining a static IP in Sri Lanka often involves significant
+            administrative procedures with your provider
+          </li>
+          <li>
+            Requires moderate technical knowledge of network configuration
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="option recommended">
+      <h2>
+        2. Dynamic DNS (DDNS)
+        <span class="recommendation-badge">Recommended</span>
+      </h2>
+      <div class="svg-container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 800 200"
+          width="100%"
+        >
+          <!-- Background -->
+          <rect width="800" height="200" fill="#f8f9fa" rx="10" ry="10" />
+
+          <!-- Internet Cloud -->
+          <ellipse
+            cx="150"
+            cy="100"
+            rx="100"
+            ry="60"
+            fill="#e6f7ff"
+            stroke="#1890ff"
+            stroke-width="2"
+          />
+          <text
+            x="150"
+            y="105"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#1890ff"
+          >
+            Internet
+          </text>
+
+          <!-- DDNS Server -->
+          <ellipse
+            cx="150"
+            cy="40"
+            rx="70"
+            ry="30"
+            fill="#f9f0ff"
+            stroke="#722ed1"
+            stroke-width="2"
+          />
+          <text
+            x="150"
+            y="45"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#722ed1"
+          >
+            DDNS Service
+          </text>
+
+          <!-- Router -->
+          <rect
+            x="300"
+            y="70"
+            width="100"
+            height="60"
+            rx="5"
+            ry="5"
+            fill="#fff"
+            stroke="#ff7875"
+            stroke-width="2"
+          />
+          <text
+            x="350"
+            y="105"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#ff7875"
+          >
+            Router
+          </text>
+
+          <!-- DVR -->
+          <rect
+            x="550"
+            y="70"
+            width="100"
+            height="60"
+            rx="5"
+            ry="5"
+            fill="#fff"
+            stroke="#52c41a"
+            stroke-width="2"
+          />
+          <text
+            x="600"
+            y="105"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#52c41a"
+          >
+            DVR
+          </text>
+
+          <!-- Connection Lines -->
+          <line
+            x1="200"
+            y1="100"
+            x2="300"
+            y2="100"
+            stroke="#1890ff"
+            stroke-width="2"
+          />
+          <line
+            x1="400"
+            y1="100"
+            x2="550"
+            y2="100"
+            stroke="#ff7875"
+            stroke-width="2"
+          />
+          <line
+            x1="300"
+            y1="80"
+            x2="150"
+            y2="50"
+            stroke="#722ed1"
+            stroke-width="2"
+            stroke-dasharray="5,5"
+          />
+
+          <!-- Domain Name -->
+          <rect
+            x="150"
+            y="150"
+            width="200"
+            height="30"
+            rx="5"
+            ry="5"
+            fill="#f6ffed"
+            stroke="#52c41a"
+            stroke-width="1"
+          />
+          <text
+            x="250"
+            y="170"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="14"
+            fill="#52c41a"
+          >
+            yourhome.ddns.net
+          </text>
+
+          <!-- Recommended Label -->
+          <rect
+            x="600"
+            y="20"
+            width="160"
+            height="30"
+            rx="15"
+            ry="15"
+            fill="#f6ffed"
+            stroke="#52c41a"
+            stroke-width="2"
+          />
+          <text
+            x="680"
+            y="40"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            font-weight="bold"
+            fill="#52c41a"
+          >
+            RECOMMENDED
+          </text>
+        </svg>
+      </div>
+
+      <h3>Overview:</h3>
+      <p>
+        DDNS provides a consistent domain name that automatically updates to
+        point to your home network, even when your IP address changes.
+      </p>
+
+      <div class="good-stuff">
+        <h3>Advantages:</h3>
+        <ul>
+          <li>
+            Compatible with standard dynamic IP connections commonly used in Sri
+            Lanka
+          </li>
+          <li>
+            Provides a user-friendly domain name (e.g., "yourhome.ddns.net")
+          </li>
+          <li>Built-in support in most contemporary routers</li>
+          <li>
+            Maintains connection reliability despite IP address changes from
+            your provider
+          </li>
+        </ul>
+      </div>
+
+      <div class="not-good-stuff">
+        <h3>Disadvantages:</h3>
+        <ul>
+          <li>Still requires port forwarding configuration on your router</li>
+          <li>
+            Premium DDNS providers typically charge an annual fee (though the
+            convenience justifies the cost)
+          </li>
+          <li>
+            Requires opening a port to the internet, which needs proper security
+            consideration
+          </li>
+        </ul>
+      </div>
+
+      <h3>Why this is recommended for Sri Lanka:</h3>
+      <p>
+        This solution is particularly well-suited for Sri Lankan users as it
+        eliminates the need to obtain a static IP address, which can be
+        administratively challenging locally. The setup process is
+        straightforward, and the modest fee for premium DDNS services is
+        cost-effective compared to the alternatives.
+      </p>
+    </div>
+
+    <div class="option">
+      <h2>3. Raspberry Pi with Tailscale</h2>
+      <div class="svg-container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 800 200"
+          width="100%"
+        >
+          <!-- Background -->
+          <rect width="800" height="200" fill="#f8f9fa" rx="10" ry="10" />
+
+          <!-- Internet Cloud -->
+          <ellipse
+            cx="150"
+            cy="100"
+            rx="100"
+            ry="60"
+            fill="#e6f7ff"
+            stroke="#1890ff"
+            stroke-width="2"
+          />
+          <text
+            x="150"
+            y="105"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#1890ff"
+          >
+            Internet
+          </text>
+
+          <!-- VPN Tunnel -->
+          <path
+            d="M200,100 C300,50 400,150 500,100"
+            stroke="#722ed1"
+            stroke-width="8"
+            fill="none"
+            stroke-opacity="0.3"
+          />
+          <path
+            d="M200,100 C300,50 400,150 500,100"
+            stroke="#722ed1"
+            stroke-width="3"
+            fill="none"
+            stroke-dasharray="10,5"
+          />
+          <text
+            x="350"
+            y="60"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#722ed1"
+          >
+            Secure VPN Tunnel
+          </text>
+
+          <!-- Raspberry Pi -->
+          <rect
+            x="300"
+            y="70"
+            width="100"
+            height="60"
+            rx="5"
+            ry="5"
+            fill="#fff"
+            stroke="#c41d7f"
+            stroke-width="2"
+          />
+          <text
+            x="350"
+            y="95"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#c41d7f"
+          >
+            Raspberry
+          </text>
+          <text
+            x="350"
+            y="115"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#c41d7f"
+          >
+            Pi
+          </text>
+
+          <!-- DVR -->
+          <rect
+            x="550"
+            y="70"
+            width="100"
+            height="60"
+            rx="5"
+            ry="5"
+            fill="#fff"
+            stroke="#52c41a"
+            stroke-width="2"
+          />
+          <text
+            x="600"
+            y="105"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="16"
+            fill="#52c41a"
+          >
+            DVR
+          </text>
+
+          <!-- Connection Lines -->
+          <line
+            x1="200"
+            y1="100"
+            x2="300"
+            y2="100"
+            stroke="#1890ff"
+            stroke-width="2"
+          />
+          <line
+            x1="400"
+            y1="100"
+            x2="550"
+            y2="100"
+            stroke="#c41d7f"
+            stroke-width="2"
+          />
+
+          <!-- Complexity Note -->
+          <rect
+            x="300"
+            y="150"
+            width="160"
+            height="30"
+            rx="5"
+            ry="5"
+            fill="#fff1f0"
+            stroke="#ff4d4f"
+            stroke-width="1"
+          />
+          <text
+            x="380"
+            y="170"
+            text-anchor="middle"
+            font-family="Arial"
+            font-size="14"
+            fill="#ff4d4f"
+          >
+            Complex Setup
+          </text>
+        </svg>
+      </div>
+
+      <h3>Overview:</h3>
+      <p>
+        This advanced solution uses a Raspberry Pi microcomputer with VPN
+        software to create a secure tunnel to your DVR system.
+      </p>
+
+      <div class="good-stuff">
+        <h3>Advantages:</h3>
+        <ul>
+          <li>Enhanced security through encrypted VPN connections</li>
+          <li>Eliminates the need for port forwarding configuration</li>
+          <li>
+            Functions with any type of internet connection available in Sri
+            Lanka
+          </li>
+        </ul>
+      </div>
+
+      <div class="not-good-stuff">
+        <h3>Disadvantages:</h3>
+        <ul>
+          <li>Significantly more complex setup process than other methods</li>
+          <li>Requires purchase and maintenance of Raspberry Pi hardware</li>
+          <li>Necessitates basic Linux administration knowledge</li>
+          <li>Generally excessive for standard home surveillance needs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom-line">
+      <p>
+        Conclusion: For most Sri Lankan users, the DDNS option provides the
+        optimal balance of accessibility and functionality. It avoids the
+        administrative challenges of acquiring a static IP while remaining
+        significantly more straightforward than the Raspberry Pi implementation.
+      </p>
+
+      <p>
+        The consensus among networking professionals is that DDNS represents the
+        most practical solution for residential DVR remote access in the Sri
+        Lankan context.
+      </p>
+
+      <p>
+        Should you require assistance with implementation, please feel free to
+        contact us for guidance through the setup process.
+      </p>
+    </div>
+  </body>
+</html>
